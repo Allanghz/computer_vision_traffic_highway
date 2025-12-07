@@ -1,0 +1,24 @@
+import os 
+
+train_path = "C:\\Users\\obiwa\\Documents\\projets\\data\\train\\label_test"
+val_path = "C:\\Users\\obiwa\\Documents\\projets\\data\\val\\labels_test"
+test_path = "C:\\Users\\obiwa\\Documents\\projets\\data\\test\\labels"
+
+mapping = {2: 0, 5: 1, 6: 2, 7: 3}
+
+for file in os.listdir(test_path):
+    if file.endswith(".txt"):
+        path = os.path.join(test_path, file)
+        new_lines = []
+
+        with open(path, "r") as f:
+            for line in f:
+                parts = line.split()
+                cls = int(parts[0])
+                # garder seulement nos 4 classes
+                if cls in mapping:
+                    parts[0] = str(mapping[cls])
+                    new_lines.append(" ".join(parts))
+
+        with open(path, "w") as f:
+            f.write("\n".join(new_lines))
