@@ -1,10 +1,8 @@
-This projets aims to detect anomalies on images (here mushrooms)
+The objective of this project is to detect vehicles and their type in a video or image stream.
 
-data contains all the images used (train/test/validation)
-models contains the model used YOLOv8
-src contains the cde
-
-Creation of streamlit interface to show results
+Model used : YOLOV8
+API : Streamlitapp
 
 
-![Illustration du projet](train_batch2.jpg)
+![Illustration du projet](runs/detect/train5/train_batch2.jpg)
+![Illustration du projet](runs/detect/train5/streamlit.png)
