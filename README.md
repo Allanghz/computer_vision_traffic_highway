@@ -5,6 +5,5 @@ models contains the model used YOLOv8
 src contains the cde
 
 Creation of streamlit interface to show results
-
-
 ![Illustration du projet](runs/detect/train5/train_batch2.jpg)
+![Illustration du projet](runs/detect/train5/streamlit.jpg)
